@@ -20,7 +20,7 @@ CREATE CONSTRAINT order_orderId_orderDate IF NOT EXISTS FOR (n:Order) REQUIRE (n
 //Creating Customer -> City Relationships
 //Creating City -> Country Relationships
 CALL apoc.periodic.iterate(
-  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=System7480$',
+  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=',
 'select * from customers')
 YIELD row",
   "MERGE (cust:Customer{customerId:row.customer_id})
@@ -43,7 +43,7 @@ MERGE (cy)-[:IS_IN]->(cn)
 //Creating Supplier -> City Relationships
 //Creating City -> Country Relationships
 CALL apoc.periodic.iterate(
-  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=System7480$',
+  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=',
 'SELECT * FROM suppliers')
 YIELD row",
   "MERGE (sup:Supplier{supplierId:row.supplier_id})
@@ -65,7 +65,7 @@ MERGE (cy)-[:IS_IN]->(cn)
 //Creating Emplpoyee -> City relationships
 //Creating City -> Country relationships
 CALL apoc.periodic.iterate(
-  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=System7480$',
+  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=',
 'select * from employees')
 YIELD row",
   "MERGE (emp:Employee{employeeId:row.employee_id})
@@ -87,7 +87,7 @@ MERGE (cy)-[:IS_IN]->(cn)
 //Creating Product -> Category Relationships
 //Creating Supplier -> Product Relationships
 CALL apoc.periodic.iterate(
-  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=System7480$',
+  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=',
 'SELECT * FROM products prd
 JOIN categories cat
 ON prd.category_id=cat.category_id')
@@ -109,7 +109,7 @@ MERGE (sup)-[:SUPPLIES]->(prd)
   
 //Creating Shipper Nodes
 CALL apoc.periodic.iterate(
-  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=System7480$',
+  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=',
 'SELECT * FROM shippers')
 YIELD row",
   "MERGE (shp:Shipper{shipperId:row.shipper_id})
@@ -123,7 +123,7 @@ shp.phone = trim(row.phone)
 //Creating Order -> Product relationships
 //Creating Customer -> Order relationships
 CALL apoc.periodic.iterate(
-  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=System7480$',
+  "CALL apoc.load.jdbc('jdbc:postgresql://localhost:5432/northwind?user=postgres&password=',
 'SELECT * FROM orders ord
 JOIN order_details orddet
 ON ord.order_id=orddet.order_id')
