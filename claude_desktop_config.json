@@ -14,7 +14,7 @@
       "env": {
         "NEO4J_URI": "neo4j+s://bf9c5a07.databases.neo4j.io",
         "NEO4J_USERNAME": "bf9c5a07",
-        "NEO4J_PASSWORD": "P47uRg0IlKdVFlgb7Qu7Fe6etZ8m-NDJPGnyYuMuf-M",
+        "NEO4J_PASSWORD": "",
         "NEO4J_DATABASE": "bf9c5a07",
         "NEO4J_READ_ONLY": "true"
       }
