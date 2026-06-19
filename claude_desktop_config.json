@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:System7480$@localhost:5432/northwind"
+      ]
+    },
+      "neo4j-mcp": {
+      "command": "neo4j-mcp",
+      "args": [],
+      "env": {
+        "NEO4J_URI": "neo4j+s://bf9c5a07.databases.neo4j.io",
+        "NEO4J_USERNAME": "bf9c5a07",
+        "NEO4J_PASSWORD": "P47uRg0IlKdVFlgb7Qu7Fe6etZ8m-NDJPGnyYuMuf-M",
+        "NEO4J_DATABASE": "bf9c5a07",
+        "NEO4J_READ_ONLY": "true"
+      }
+    }
+  },
+  "preferences": {
+    "remoteToolsDeviceName": "desktop-h8n44s5",
+    "coworkHipaaRestricted": false,
+    "coworkWebSearchEnabled": true,
+    "coworkScheduledTasksEnabled": false,
+    "ccdScheduledTasksEnabled": false,
+    "bypassPermissionsGateByAccount": {
+      "1bcd740d-d035-4d10-bf2f-1c1756636cdf": false
+    },
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      }
+    },
+    "coworkModelAutoFallbackByAccount": {
+      "1bcd740d-d035-4d10-bf2f-1c1756636cdf": true
+    }
+  },
+  "coworkUserFilesPath": "C:\\Users\\vinod\\Claude"
+}
