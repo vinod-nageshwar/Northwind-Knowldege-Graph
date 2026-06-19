@@ -5,7 +5,7 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-postgres",
-        "postgresql://postgres:System7480$@localhost:5432/northwind"
+        "postgresql://postgres:<password>$@localhost:5432/northwind"
       ]
     },
       "neo4j-mcp": {
