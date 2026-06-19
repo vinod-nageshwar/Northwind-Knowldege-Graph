@@ -27,7 +27,7 @@
     "coworkScheduledTasksEnabled": false,
     "ccdScheduledTasksEnabled": false,
     "bypassPermissionsGateByAccount": {
-      "1bcd740d-d035-4d10-bf2f-1c1756636cdf": false
+      "": false
     },
     "epitaxyPrefs": {
       "starred-local-code-sessions": [],
